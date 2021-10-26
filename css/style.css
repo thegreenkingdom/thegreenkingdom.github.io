@@ -1,0 +1,764 @@
+:root{
+    --grayishBlue:hsl(208, 11%, 55%);
+    --transitionSpeed:600ms;
+    font-size: 18px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    --moderateViolet:rgb(108,99,255);
+    --darkGrayishBlue:rgb(47,46,65);
+    --darkBlakishBlue:rgb(63,61,86);
+    --white:hsl(0, 0%, 100%);
+    --lightGray:hsl(0, 0%, 81%);
+    --lightGrayishBlue:hsl(210, 46%, 95%);
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    position:fixed;
+    top: 0;
+    width: 90%;
+    transition: 0.6s;
+}
+
+.sticky{
+    background-color: rgba(64, 63, 78, 0.267);
+  }
+  .sticky img{
+      display: none;
+  }
+
+.logoContainer img{
+    width: 6rem;
+}
+
+.logoContainer img:hover{
+    cursor: pointer;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////// Navbar Styling section ////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.navbar-nav{
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    justify-content: space-between;
+    margin: 0;
+    position: relative;
+}
+
+.navbar-nav .navItem a{
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    font-size: 1rem;
+    white-space: nowrap;
+    color:  black;
+    position: relative;
+}
+
+.navItem{
+    padding: 1rem;
+    margin:0.1rem;
+    position: relative;
+}
+
+.navItem a:hover{
+    color: var(--moderateViolet);
+    text-shadow: 0px 0px 10px white;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////// Hamburger Icon /////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.hamburgerIcon{
+    display: none;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.4s;
+  }
+  
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+  
+.change .bar2 {opacity: 0;}
+  
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////Intro Container has been designed here/////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.introContainer{
+    display: grid;
+    grid-template-areas:
+    'main main image image image'
+    'main main image image image';
+    font-family: 'Poppins', sans-serif;
+    margin-top: 7rem;
+}
+
+.introContent{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1.3rem;
+}
+
+.introContent h2{
+    font-size: 1rem;
+}
+
+.introContainer img{
+    width: 10rem;
+}
+
+.introContainer p{
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.image{
+    grid-area: image;
+    /* border: 2px solid black; */
+}
+
+.image img{
+    padding: 2rem;
+    width: 38rem;
+    /* filter: grayscale(100%); */
+}
+
+.getStarted{
+    margin-top: 1.2rem;
+    display: flex;
+     justify-content: center;
+     align-items: center;
+     border: none;
+     background-color: var(--darkBlakishBlue); 
+     padding: 0.7rem 1rem;
+     border-radius: 2.5rem;
+     box-shadow:0 0 10px rgb(206, 197, 197);
+     height: 2.7rem;
+     width: 15rem;
+     font-size: .8rem;
+     white-space: nowrap;
+     font-family: 'Open Sans', sans-serif;
+     color: var(--paleCyan);
+     font-weight: 600;
+     transition: transform scale var(--transitionSpeed);  
+     justify-self: start;
+     color: whitesmoke;
+}
+
+.getStarted:hover{
+   transform: translate(-1px,-1px);
+   transform: scale(1.05);
+   cursor: pointer;
+}
+
+.link{
+    text-decoration: none;
+}
+.getStarted a:visited{
+    color: black;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////// Department Intro has been designed here///////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#middle{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.sectionHeading{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.contentContainers{
+    /* border: 2px solid black; */
+    display: grid;
+    grid-template-areas: 
+    'writing writing image';
+    margin: 2.4rem 6.2rem;
+    border-radius: 1.5rem;
+    box-shadow:0 0 12px rgb(206, 197, 197);
+}
+
+.contentContainers h2{
+    margin-bottom: 0;
+    color: var(--darkCyan);
+}
+
+.contentContainers p{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    color: var(--grayishBlue);
+}
+
+#rightAlign{
+    grid-template-areas: 
+    'image writing writing';
+}
+
+.illustrations{
+    grid-area: image;
+    /* border: 2px solid black; */
+    padding: 2rem 3rem;
+    margin: 0 0 0 0;
+}
+
+.illustrations img{
+    width: 25rem;
+    height: 17rem;
+    /* filter: grayscale(100%); */
+}
+
+.writing{
+    grid-area: writing;
+    /* border: 2px solid black; */
+    box-sizing: border-box;
+    padding: 3rem 2rem;
+    margin: 0rem 3rem 0rem 4rem;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////// Events has been designed here/////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#cards{
+    display: flex;
+    justify-content: center;
+    margin: 4rem;
+}
+
+.cardsTag{
+    margin: 0px -2px;
+    border-bottom: 2px solid hsl(229, 8%, 60%);
+    color: hsl(228, 6%, 34%);
+    padding: 1.3rem 3.5rem;
+    cursor: pointer;
+    font-weight: 420;
+    display: inline-block;
+    width: 6rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cardsTag:hover{
+    color: var(--moderateViolet);
+ }
+
+.violetBorder{
+    border-bottom: 4px solid var(--moderateViolet);
+}
+
+#cardsContent{
+    display: flex;
+}
+
+.illustrationsTab img{
+    width: 30rem;
+    margin: 0.5rem 4rem;
+}
+
+#moreInfoBookmarking{
+    width: 6rem;
+    cursor: pointer;
+}
+
+#moreInfoSearching{
+    width: 6rem;
+    cursor: pointer;
+}
+
+#moreInfoSharing{
+    width: 6rem;
+    cursor: pointer;
+}
+
+.card{
+    display: none;  
+    max-height: 33rem;  
+    padding: 0rem 3rem;
+}
+
+.intro{
+    padding: 3rem;
+    margin: 1rem 1rem 1rem 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+.intro p{
+    color: var(--grayishBlue);
+    font-weight: 400;
+    margin: 2rem 0rem;
+}
+.default{
+    display: flex;
+}
+  
+.defaultSwitch{
+    border-bottom: 4px solid var(--moderateViolet);
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////// Teams Carousel ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+.container h2{
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel {
+    position: relative;
+    width: 70%;
+    height: 35rem; 
+    margin: 0 auto;
+  }
+
+  .carousel-content {
+    position: relative;
+    overflow: hidden;
+    transition: width .4s;
+    height: 100%;
+    max-height: 60%;
+    padding: 5rem 0rem;
+    box-shadow:0 0 12px rgb(206, 197, 197);
+    border-radius: 20px;
+    min-width: 20rem;
+  }
+  
+  .slide {
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    transition: left .4s cubic-bezier(.47,.13,.15,.89);
+  }
+
+  .slide img{
+      width: 90%;
+      height: 100%;
+      margin: 1rem;
+  }
+  .slide p{
+      font-size: 1rem;
+      text-align: center;
+      margin: 0;
+      font-family: 'Poppins','sans-serif';
+  }
+
+  .nav {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+  }
+  
+  .nav-left {
+    left: -3rem;
+  }
+  
+  .nav-right {
+    right: -25px;
+  }
+  
+  .carousel-arrow-icon-left {
+    margin-left: 10px;
+    margin-top: 2px;
+  }
+  
+  .carousel-arrow-icon-right {
+    margin-left: 10px;
+    margin-top: 2px;
+  }
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////// Contact ///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    padding: 3rem 0rem;
+}
+
+#contact::before{
+    content: "";
+    background-color: var(--darkBlakishBlue);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.contactContainer{
+    width: 38%;
+}
+
+.contactContainer p{
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 3px;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.contactContainer h2{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#emailId{
+    padding: 0.8rem 1rem;
+    width: 12rem;
+    border: none;
+    font-family: inherit;
+    border-radius: 5px;
+    margin: 1rem 0.5rem;
+}
+
+#emailId::placeholder{
+    color: var(--darkGrayishBlue);
+}
+
+.contactForm img{
+    position: relative;
+    margin: 0px 20px -4px -42px;
+    display: none;
+}
+
+#contactUs{
+    padding: 0.8rem 1rem;
+}
+
+.contactForm p{
+    font-size: 0.7rem;
+    margin: -13px 0px 0px 20px;
+    display: none;
+    position: relative;
+    z-index: 1;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////// Contact ///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////// */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 7rem;
+    color: white;
+    background-color: var(--nuetralVeryDarkBlue);
+    flex-wrap: wrap;
+}
+
+.footerNav{
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    padding: 1rem;
+}
+
+.socialIcons img{
+    margin: 0rem 0.8rem;
+    width: 3rem;
+    cursor: pointer;
+    transition: transform var(--transitionSpeed);
+}
+
+.socialIcons img:hover{
+   cursor: pointer;
+   transform: scale(1.2);
+}   
+
+.attribution{
+  text-align: center;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////// Media Queries ///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////// */
+@media only screen and (max-width:1275px){
+    
+    #header{
+        width: 97%;
+        padding: 1rem;
+    }
+
+    .sticky img{
+        display: block;
+    }
+
+    .navbar{
+        justify-content: center;
+    }
+
+    .main::before{
+        content: "";
+        background-color: rgb(226,224,253);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .introContainer{
+        grid-template-areas: 
+        'main main main'
+        'image image image';
+        text-align: center;
+    }
+
+    .introContent{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .introContent h2{
+        font-size: 1.5rem;
+    }
+
+    .contentContainers,#rightAlign{
+        grid-template-areas:
+        'image image image'
+        'writing writing writing';
+        text-align: center;
+    }
+    .toggleCards{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center; 
+      }
+       .illustration{
+        width: 100%; 
+      }
+      .illustrationsTab{
+          width: 20rem;
+      }
+      .illustrationsTab img{
+          width: 20rem;
+          margin: 0;
+      }    
+      .card{
+        height: auto;
+        max-height: none;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .intro{
+          padding: 3rem;
+          text-align: center;
+      }
+      .getStarted{
+          margin: auto;
+      }
+      .writing{
+          margin: 1rem;
+      }
+
+}
+
+@media only screen and (max-width:1070px){
+    
+    #top{
+         padding: 0;
+    }
+    #header{
+        justify-content: space-between;
+        width: 96%;
+        padding: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .hamburgerIcon{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header img{
+        width: 12rem;
+    }
+
+    .navbar{
+        display: none;
+        width: 100%;
+    }
+
+    .show{
+        display: inline-block;
+    }
+
+    .show ul{
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.767);
+    }
+    .show .navbar-nav .navItem a{
+         justify-content: center;
+         text-align: left;
+    }
+    
+    .introContent{
+        padding: 1rem;
+    }
+    .introContainer img{
+        padding: 0;
+        width: 30rem;
+    }
+    .contentContainers{
+        margin-right:  1rem;
+        margin-left: 1rem;
+    }
+    .illustration{
+        width: 90%;
+        margin-left: auto; 
+      }
+      .card{
+       padding: 0;
+      }
+      .carousel-content{
+          height: 40%;
+      }
+      .slide p{
+          font-size: 0.7rem;
+      }
+}
+
+@media only screen and (max-width:600px) {
+    #header{
+        padding: 0.5rem;
+    }
+    #top{
+        padding: 5px;
+        margin: 0;
+    }
+    .introContent{
+        padding: 3rem 0.6rem;
+    }
+    .introContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .introContainer img{
+        padding: 0;
+        width: 18rem;
+    }
+    .contentContainers{
+        margin-right:  1rem;
+        margin-left: 1rem;
+    }
+    .illustrations{
+        padding: 1rem;
+    }
+    .illustrations img{
+        width: 16rem;
+        height: 15rem;
+    }
+    .contactContainer h2{
+        font-size: 1rem;
+    }
+    
+}
+@media only screen and (max-width:434px){
+    .illustration{
+        width: 20rem;
+        background-position-y:3rem;
+        background-position-x: 1rem;
+    }
+    .illustrationsTab img{
+        width: 16rem;
+    }
+    .illustrationsTab{
+        width: 18rem;
+        background-position-y: 1rem;
+    }
+    .question{
+        width: 18rem;
+        grid-template-columns: 17rem 1rem;
+    }
+    .contactForm{
+        text-align: center;
+        position: relative;
+    }
+    #emailId{
+        margin: 2.5rem 0rem;
+    }
+    #contactUs{
+        width: 70%;
+    }
+
+    .contactForm p{
+        position: absolute;
+        margin: -91px 0px 0px 75px;
+    }
+}
